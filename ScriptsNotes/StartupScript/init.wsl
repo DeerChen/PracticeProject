@@ -1,2 +1,2 @@
 #!/bin/sh
-/home/sunkoo/.HandoverManual $1
+/home/用户名/.HandoverManual $1
