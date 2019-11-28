@@ -1,2 +1,2 @@
 Set WshShell = CreateObject("WScript.Shell")
-WshShell.Run "wsl.exe -e jupyter notebook --allow-root", vbhide
+WshShell.Run "wsl.exe jupyter notebook", vbhide
