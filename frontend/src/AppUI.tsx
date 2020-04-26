@@ -6,9 +6,9 @@ import './AppUI.less';
 interface Props {
     inputVal: string;
     data: string[];
-    inputChange: (value: string) => void;
-    sub: (e: any) => void;
-    delItem: (index: any) => void;
+    inputChange: Function;
+    sub: Function;
+    delItem: Function;
 }
 
 function AppUI(props: Props) {
@@ -21,6 +21,8 @@ function AppUI(props: Props) {
                 onChange={(e) => props.inputChange(e.target.value)}
             />
             <Button
+                id='antdButton'
+                type='primary'
                 onClick={() => props.sub(props.inputVal)}
             >提交</Button>
             <List
