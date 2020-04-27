@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppUI from './AppUI';
-import { del, change, submit, getData } from './store/actionCreators';
+import { del, change, submit, initSaga } from './store/actionCreators';
 import store from './store';
 
 interface State {
@@ -18,7 +18,7 @@ class App extends Component<object, State> {
         store.subscribe(this.dataChange);
     }
     componentDidMount() {
-        const action = getData();
+        const action = initSaga();
         store.dispatch(action);
     }
     render() {

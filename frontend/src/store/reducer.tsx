@@ -1,5 +1,4 @@
-import { INIT, DEL, CHANGE, SUBMIT } from "./actionTypes";
-import axios from 'axios';
+import { INIT, DEL, CHANGE, SUBMIT, GETSAGADATA } from "./actionTypes";
 
 interface State {
     inputVal: string;
@@ -16,9 +15,9 @@ const copyState = (state: State) => {
 }
 
 export default (state = defaultState, action: any) => {
-    if (action.type === INIT) {
+    if (action.type === INIT || action.type === GETSAGADATA) {
         const newState = copyState(state);
-        for (let i in action.data){
+        for (let i in action.data) {
             newState.data.push(action.data[i]);
         }
         return newState;
@@ -31,7 +30,7 @@ export default (state = defaultState, action: any) => {
     if (action.type === SUBMIT) {
         const newState = copyState(state);
         newState.data.push(action.value);
-        newState.inputVal='';
+        newState.inputVal = '';
         return newState;
     }
     if (action.type === DEL) {

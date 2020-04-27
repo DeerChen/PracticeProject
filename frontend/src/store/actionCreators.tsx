@@ -1,5 +1,14 @@
-import { INIT, DEL, CHANGE, SUBMIT } from "./actionTypes"
+import { INIT, DEL, CHANGE, SUBMIT, SAGAINIT, GETSAGADATA } from "./actionTypes"
 import axios from "axios"
+
+export const initSaga = () => ({
+    type: SAGAINIT
+})
+
+export const getSagaData = (res: { data: { data: any } }) => ({
+    type: GETSAGADATA,
+    data: res.data.data
+})
 
 const init = (data: any) => ({
     type: INIT,
@@ -7,7 +16,7 @@ const init = (data: any) => ({
 })
 
 export const getData = () => {
-    return (dispatch: any) => {
+    return (dispatch: (arg0: { type: string; data: any }) => void) => {
         axios.get('/api')
             .then((res) => {
                 const data = res.data.data;
