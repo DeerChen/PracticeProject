@@ -18,7 +18,7 @@ const TodoList = (props) => {
             </div>
             <ul>
                 {
-                    list.map((item, index)=>{
+                    list.map((item, index) => {
                         return (
                             <li
                                 key={index}
@@ -47,11 +47,11 @@ const mapDispatchToProps = (dispatch) => {
             const action = valChange(e);
             dispatch(action);
         },
-        submit(){
+        submit() {
             const action = sub();
             dispatch(action);
         },
-        delItem(index){
+        delItem(index) {
             const action = del(index);
             dispatch(action);
         }
