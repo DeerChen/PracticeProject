@@ -1,16 +1,11 @@
-import { INIT, DEL, CHANGE, SUBMIT, SAGAINIT, GETSAGADATA } from "./actionTypes"
+import { INIT, DEL, CHANGE, SUBMIT, SAGAINIT} from "./actionTypes"
 import axios from "axios"
 
 export const initSaga = () => ({
     type: SAGAINIT
 })
 
-export const getSagaData = (res: { data: { data: any } }) => ({
-    type: GETSAGADATA,
-    data: res.data.data
-})
-
-const init = (data: any) => ({
+export const init = (data: any) => ({
     type: INIT,
     data
 })

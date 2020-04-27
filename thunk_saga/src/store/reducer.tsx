@@ -1,4 +1,4 @@
-import { INIT, DEL, CHANGE, SUBMIT, GETSAGADATA } from "./actionTypes";
+import { INIT, DEL, CHANGE, SUBMIT } from "./actionTypes";
 
 interface State {
     inputVal: string;
@@ -15,7 +15,7 @@ const copyState = (state: State) => {
 }
 
 export default (state = defaultState, action: any) => {
-    if (action.type === INIT || action.type === GETSAGADATA) {
+    if (action.type === INIT) {
         const newState = copyState(state);
         for (let i in action.data) {
             newState.data.push(action.data[i]);
