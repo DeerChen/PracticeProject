@@ -1,6 +1,6 @@
 import { takeEvery, put } from 'redux-saga/effects';
 import { SAGAINIT } from './actionTypes';
-import axios from 'axios';
+import Axios from 'axios';
 import { init } from './actionCreators';
 
 function* Saga() {
@@ -12,7 +12,7 @@ function* Saga() {
 
 function* initSaga() {
     try {
-        const res = yield axios.get('/api')
+        const res = yield Axios.get('/api');
         const action = init(res.data.data);
         yield put(action);
     } catch (e) {

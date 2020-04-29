@@ -1,5 +1,5 @@
 import { INIT, DEL, CHANGE, SUBMIT, SAGAINIT} from "./actionTypes"
-import axios from "axios"
+import Axios from "axios"
 
 export const initSaga = () => ({
     type: SAGAINIT
@@ -12,7 +12,7 @@ export const init = (data: any) => ({
 
 export const getData = () => {
     return (dispatch: (arg0: { type: string; data: any }) => void) => {
-        axios.get('/api')
+        Axios.get('/api')
             .then((res) => {
                 const data = res.data.data;
                 const action = init(data);

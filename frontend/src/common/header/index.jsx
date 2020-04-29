@@ -74,7 +74,7 @@ class Header extends Component {
         if (jsList.length) {
             for (let i = (page - 1) * 10; i < page * 10; i++) {
                 pageList.push(
-                    <SearchInfoItem key={i}>
+                    <SearchInfoItem key={jsList[i] + page + [i]}>
                         {jsList[i]}
                     </SearchInfoItem>
                 );
@@ -89,10 +89,17 @@ class Header extends Component {
                 >
                     <SearchInfoTitle>
                         热门搜索
-                                <SearchInfoSwitch
-                            onClick={() => changePage(page, totalPage)}
-                        >换一批
-                                </SearchInfoSwitch>
+                        <SearchInfoSwitch
+                            onClick={() => changePage(page, totalPage, this.spin)}
+                        >
+                            <span
+                                ref={(icon) => { this.spin = icon }}
+                                className="iconfont"
+                            >
+                                &#xe65e;
+                            </span>
+                            换一批
+                        </SearchInfoSwitch>
                     </SearchInfoTitle>
                     <SearchInfoList>
                         {pageList}
@@ -100,7 +107,6 @@ class Header extends Component {
                 </SearchInfo>
             )
         }
-        return null;
     }
 }
 
@@ -126,11 +132,21 @@ const mapDispathToProps = (dispatch) => {
         mouseT() {
             dispatch(actionCreators.mouseTo());
         },
-        changePage(page, totalPage) {
+        changePage(page, totalPage, spin) {
+            let originAngle = spin.style.transform.replace(/[^0-9]/ig, '');
+            if (originAngle) {
+                originAngle = parseInt(originAngle, 10);
+            } else {
+                originAngle = 0;
+            }
+
+            spin.style.transform = `rotate(${originAngle + 360}deg)`;
+
             if (page < totalPage) {
                 dispatch(actionCreators.changeP(page + 1));
+            } else {
+                dispatch(actionCreators.changeP(1));
             }
-            dispatch(actionCreators.changeP(1));
         }
     }
 

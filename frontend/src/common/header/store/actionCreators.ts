@@ -1,5 +1,5 @@
 import { TOGGLE, UPDATE, MOUSETOGGLE, CHANGEPAGE } from "./actionTypes";
-import axios from 'axios';
+import Axios from 'axios';
 import { fromJS } from 'immutable';
 
 export const toggle = () => ({
@@ -14,7 +14,7 @@ const update = (data: string[]) => ({
 
 export const getList = () => {
     return (dispatch: any) => {
-        axios.get('/api')
+        Axios.get('/api/headerList.json')
             .then((res) => {
                 const data = res.data.data;
                 const action = update(data);

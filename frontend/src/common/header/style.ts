@@ -7,9 +7,7 @@ export const HeaderWrapper = styled.div`
     border-bottom: 1px solid #f0f0f0;
 `;
 
-export const Logo = styled.a.attrs({
-    href: '/'
-})`
+export const Logo = styled.div`
     position: absolute;
     top: 0;
     left: 0;
@@ -21,7 +19,7 @@ export const Logo = styled.a.attrs({
 `;
 
 export const Nav = styled.div`
-    width: 960px;
+    width: 70%;
     height: 100%;
     padding-right: 70px;
     box-sizing: border-box;
@@ -140,9 +138,23 @@ export const SearchInfoTitle = styled.div`
     color: #969696;
 `;
 
-export const SearchInfoSwitch = styled.span`
+export const SearchInfoSwitch = styled.div`
+    position: relative;
+    cursor: pointer;
     float: right;
     font-size: 13px;
+    &:hover {
+        .iconfont {
+            transition: transform .5s;
+            transform: rotateZ(360deg);
+        }
+    }
+    .iconfont {
+        position: absolute;
+        line-height: 9px;
+        right: 34px;
+        transition: transform .5s;
+    }
 `;
 
 export const SearchInfoList = styled.div`
