@@ -19,6 +19,7 @@ import { GlobalStyle } from '../../style';
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     componentDidMount() {
@@ -30,7 +31,11 @@ class Header extends Component {
         return (
             <HeaderWrapper>
                 <GlobalStyle />
-                <Logo />
+                <Link
+                    to='/'
+                >
+                    <Logo />
+                </Link>
                 <Nav>
                     <IconFontGlobalStyle />
                     <NavItem className='left'>首页</NavItem>

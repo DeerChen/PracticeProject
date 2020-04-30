@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 
 class Topic extends PureComponent {
     render() {
-        const { list } = this.props;
+        const { topicList } = this.props;
         return (
             <TopicWrapper>
                 {
-                    list.map((item) => (
+                    topicList.map((item) => (
                         <TopicItem
                             key={item.get('id')}
                         >
@@ -28,7 +28,7 @@ class Topic extends PureComponent {
 
 const mapState = (state) => {
     return {
-        list: state.getIn(['home', 'topicList'])
+        topicList: state.getIn(['home', 'topicList'])
     }
 }
 
