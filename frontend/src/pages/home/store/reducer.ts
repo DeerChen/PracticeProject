@@ -21,8 +21,8 @@ const init = (state: any, action: any) => {
 
 const addHomeList = (state: any, action: any) => {
     return state.merge({
-        articleList: state.get('articleList').concat(action.list),
-        articlePage: action.nextPage
+        'articleList': state.get('articleList').concat(action.list),
+        'articlePage': action.nextPage
     })
 };
 

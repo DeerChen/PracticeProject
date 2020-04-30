@@ -1,1 +1,1 @@
-export const INIT = 'init';
+export const INITDETAIL = 'init_detail';

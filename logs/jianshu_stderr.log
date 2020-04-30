@@ -1273,3 +1273,345 @@ Python auto-reloader enabled
 [pid: 1261|app: 0|req: 14/14] 192.168.168.1 () {50 vars in 878 bytes} [Wed Apr 29 14:16:47 2020] GET / => generated 2277 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
 [pid: 1261|app: 0|req: 15/15] 192.168.168.1 () {48 vars in 798 bytes} [Wed Apr 29 14:16:47 2020] GET /api/headerList.json => generated 294 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
 [pid: 1261|app: 0|req: 16/16] 192.168.168.1 () {48 vars in 786 bytes} [Wed Apr 29 14:16:47 2020] GET /api/home.json => generated 1592 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file /root/Project/jianshu/app.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 1261)...
+worker 1 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /root/Project/jianshu
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (:1024)
+running /root/VENV/bin/uwsgi
+[uWSGI] getting INI configuration from /root/Project/jianshu/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Apr 30 13:51:51 2020] ***
+compiled with version: 8.3.0 on 26 April 2020 05:14:19
+os: Linux-4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26)
+nodename: Debian
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Project/jianshu
+detected binary path: /root/VENV/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 15569
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :1024 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.3 (default, Dec 20 2019, 18:57:59)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /root/VENV
+Set PythonHome to /root/VENV
+Python main interpreter initialized at 0x5621719f86c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5621719f86c0 pid: 582 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 582)
+spawned uWSGI worker 1 (pid: 5916, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file /root/Project/jianshu/app.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 5916)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/Project/jianshu
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (:1024)
+running /root/VENV/bin/uwsgi
+[uWSGI] getting INI configuration from /root/Project/jianshu/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Apr 30 13:52:27 2020] ***
+compiled with version: 8.3.0 on 26 April 2020 05:14:19
+os: Linux-4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26)
+nodename: Debian
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Project/jianshu
+detected binary path: /root/VENV/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 15569
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :1024 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.3 (default, Dec 20 2019, 18:57:59)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /root/VENV
+Set PythonHome to /root/VENV
+Python main interpreter initialized at 0x560e9af926c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+Traceback (most recent call last):
+  File "/root/Project/jianshu/app.py", line 123, in <module>
+    @app.route('/api/detail.json?id=<:num>', methods=['GET'])
+  File "/root/VENV/lib/python3.7/site-packages/flask/app.py", line 1315, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/root/VENV/lib/python3.7/site-packages/flask/app.py", line 98, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/root/VENV/lib/python3.7/site-packages/flask/app.py", line 1278, in add_url_rule
+    self.url_map.add(rule)
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 1482, in add
+    rule.bind(self)
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 767, in bind
+    self.compile()
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 836, in compile
+    _build_regex(self.rule if self.is_leaf else self.rule.rstrip("/"))
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 803, in _build_regex
+    for converter, arguments, variable in parse_rule(rule):
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 228, in parse_rule
+    raise ValueError("malformed url rule: %r" % rule)
+ValueError: malformed url rule: '/api/detail.json?id=<:num>'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 582)
+spawned uWSGI worker 1 (pid: 5919, cores: 1)
+Python auto-reloader enabled
+SystemError: ../Objects/listobject.c:243: bad argument to internal function
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560e9af926c0 pid: 5919 (default app)
+[pid: 5919|app: 0|req: 1/1] 192.168.168.1 () {48 vars in 848 bytes} [Thu Apr 30 14:04:26 2020] GET / => generated 2277 bytes in 42 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 2/2] 192.168.168.1 () {46 vars in 712 bytes} [Thu Apr 30 14:04:26 2020] GET /robots.txt => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 3/3] 192.168.168.1 () {48 vars in 831 bytes} [Thu Apr 30 14:04:26 2020] GET /backend/static/build/static/js/2.eff5d0ec.chunk.js => generated 291131 bytes in 18 msecs via sendfile() (HTTP/1.1 200) 7 headers in 303 bytes (0 switches on core 0)
+[pid: 5919|app: 0|req: 4/4] 192.168.168.1 () {48 vars in 837 bytes} [Thu Apr 30 14:04:26 2020] GET /backend/static/build/static/js/main.4caf593a.chunk.js => generated 23569 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 7 headers in 301 bytes (0 switches on core 0)
+[pid: 5919|app: 0|req: 5/5] 192.168.168.1 () {48 vars in 799 bytes} [Thu Apr 30 14:04:26 2020] GET /api/headerList.json => generated 294 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 6/6] 192.168.168.1 () {48 vars in 787 bytes} [Thu Apr 30 14:04:26 2020] GET /api/home.json => generated 1592 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 7/7] 192.168.168.1 () {48 vars in 808 bytes} [Thu Apr 30 14:04:32 2020] GET /api/detail.json?id=1 => generated 232 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 8/8] 192.168.168.1 () {42 vars in 769 bytes} [Thu Apr 30 14:04:38 2020] GET /backend/static/build/static/js/2.eff5d0ec.chunk.js.map => generated 988039 bytes in 9 msecs via sendfile() (HTTP/1.1 200) 7 headers in 290 bytes (0 switches on core 0)
+[pid: 5919|app: 0|req: 9/9] 192.168.168.1 () {42 vars in 775 bytes} [Thu Apr 30 14:04:38 2020] GET /backend/static/build/static/js/main.4caf593a.chunk.js.map => generated 43055 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 288 bytes (0 switches on core 0)
+[pid: 5919|app: 0|req: 10/10] 192.168.168.1 () {48 vars in 787 bytes} [Thu Apr 30 14:04:41 2020] GET /api/home.json => generated 1592 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 11/11] 192.168.168.1 () {48 vars in 808 bytes} [Thu Apr 30 14:04:42 2020] GET /api/detail.json?id=1 => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 12/12] 192.168.168.1 () {48 vars in 887 bytes} [Thu Apr 30 14:05:48 2020] GET /api/detail.json?id=1 => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 13/13] 192.168.168.1 () {48 vars in 809 bytes} [Thu Apr 30 14:05:48 2020] GET /favicon.ico => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 14/14] 192.168.168.1 () {48 vars in 885 bytes} [Thu Apr 30 14:05:55 2020] GET /api/detail.json?id= => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 5919|app: 0|req: 15/15] 192.168.168.1 () {48 vars in 856 bytes} [Thu Apr 30 14:06:00 2020] GET /api/ => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+[uWSGI] getting INI configuration from /root/Project/jianshu/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Apr 30 14:06:55 2020] ***
+compiled with version: 8.3.0 on 26 April 2020 05:14:19
+os: Linux-4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26)
+nodename: Debian
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Project/jianshu
+detected binary path: /root/VENV/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 15569
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :1024 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.3 (default, Dec 20 2019, 18:57:59)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /root/VENV
+Set PythonHome to /root/VENV
+Python main interpreter initialized at 0x56303abd5b20
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56303abd5b20 pid: 6146 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6146)
+spawned uWSGI worker 1 (pid: 6147, cores: 1)
+Python auto-reloader enabled
+[pid: 6147|app: 0|req: 1/1] 192.168.168.1 () {50 vars in 887 bytes} [Thu Apr 30 14:06:58 2020] GET /api/ => generated 232 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 6147|app: 0|req: 2/2] 192.168.168.1 () {50 vars in 887 bytes} [Thu Apr 30 14:06:59 2020] GET /api/ => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 6147|app: 0|req: 3/3] 192.168.168.1 () {48 vars in 848 bytes} [Thu Apr 30 14:07:06 2020] GET / => generated 2277 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 6147|app: 0|req: 4/4] 192.168.168.1 () {48 vars in 799 bytes} [Thu Apr 30 14:07:07 2020] GET /api/headerList.json => generated 294 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 6147|app: 0|req: 5/5] 192.168.168.1 () {48 vars in 787 bytes} [Thu Apr 30 14:07:07 2020] GET /api/home.json => generated 1592 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[pid: 6147|app: 0|req: 6/6] 192.168.168.1 () {48 vars in 808 bytes} [Thu Apr 30 14:07:09 2020] GET /api/detail.json?id=1 => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 6147|app: 0|req: 7/7] 192.168.168.1 () {48 vars in 787 bytes} [Thu Apr 30 14:07:15 2020] GET /api/home.json => generated 1592 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[pid: 6147|app: 0|req: 8/8] 192.168.168.1 () {48 vars in 808 bytes} [Thu Apr 30 14:07:17 2020] GET /api/detail.json?id=3 => generated 232 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+[uWSGI] getting INI configuration from /root/Project/jianshu/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Apr 30 14:08:10 2020] ***
+compiled with version: 8.3.0 on 26 April 2020 05:14:19
+os: Linux-4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26)
+nodename: Debian
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Project/jianshu
+detected binary path: /root/VENV/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 15569
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :1024 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.3 (default, Dec 20 2019, 18:57:59)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /root/VENV
+Set PythonHome to /root/VENV
+Python main interpreter initialized at 0x561445bed750
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561445bed750 pid: 6159 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6159)
+spawned uWSGI worker 1 (pid: 6160, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file /root/Project/jianshu/app.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 6160)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/Project/jianshu
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (:1024)
+running /root/VENV/bin/uwsgi
+[uWSGI] getting INI configuration from /root/Project/jianshu/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Apr 30 14:09:49 2020] ***
+compiled with version: 8.3.0 on 26 April 2020 05:14:19
+os: Linux-4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26)
+nodename: Debian
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Project/jianshu
+detected binary path: /root/VENV/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 15569
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :1024 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.3 (default, Dec 20 2019, 18:57:59)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /root/VENV
+Set PythonHome to /root/VENV
+Python main interpreter initialized at 0x561346dc46c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+Traceback (most recent call last):
+  File "/root/Project/jianshu/app.py", line 124, in <module>
+    @app.route('/api/detail.json?id=<:num>', methods=['GET'])
+  File "/root/VENV/lib/python3.7/site-packages/flask/app.py", line 1315, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/root/VENV/lib/python3.7/site-packages/flask/app.py", line 98, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/root/VENV/lib/python3.7/site-packages/flask/app.py", line 1278, in add_url_rule
+    self.url_map.add(rule)
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 1482, in add
+    rule.bind(self)
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 767, in bind
+    self.compile()
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 836, in compile
+    _build_regex(self.rule if self.is_leaf else self.rule.rstrip("/"))
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 803, in _build_regex
+    for converter, arguments, variable in parse_rule(rule):
+  File "/root/VENV/lib/python3.7/site-packages/werkzeug/routing.py", line 228, in parse_rule
+    raise ValueError("malformed url rule: %r" % rule)
+ValueError: malformed url rule: '/api/detail.json?id=<:num>'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 6159)
+spawned uWSGI worker 1 (pid: 6221, cores: 1)
+Python auto-reloader enabled
+SIGINT/SIGQUIT received...killing workers...
+[uWSGI] getting INI configuration from /root/Project/jianshu/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Apr 30 14:17:35 2020] ***
+compiled with version: 8.3.0 on 26 April 2020 05:14:19
+os: Linux-4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26)
+nodename: Debian
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Project/jianshu
+detected binary path: /root/VENV/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 15569
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :1024 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.3 (default, Dec 20 2019, 18:57:59)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /root/VENV
+Set PythonHome to /root/VENV
+Python main interpreter initialized at 0x563529835b20
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x563529835b20 pid: 6307 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6307)
+spawned uWSGI worker 1 (pid: 6308, cores: 1)
+Python auto-reloader enabled
+[pid: 6308|app: 0|req: 1/1] 192.168.168.1 () {48 vars in 848 bytes} [Thu Apr 30 14:17:40 2020] GET / => generated 2277 bytes in 33 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 2/2] 192.168.168.1 () {48 vars in 799 bytes} [Thu Apr 30 14:17:41 2020] GET /api/headerList.json => generated 294 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 3/3] 192.168.168.1 () {48 vars in 787 bytes} [Thu Apr 30 14:17:41 2020] GET /api/home.json => generated 1592 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 4/4] 192.168.168.1 () {48 vars in 808 bytes} [Thu Apr 30 14:17:44 2020] GET /api/detail.json?id=1 => generated 202 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 5/5] 192.168.168.1 () {48 vars in 787 bytes} [Thu Apr 30 14:17:47 2020] GET /api/home.json => generated 1592 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 6/6] 192.168.168.1 () {50 vars in 879 bytes} [Thu Apr 30 14:18:30 2020] GET / => generated 2277 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 7/7] 192.168.168.1 () {48 vars in 799 bytes} [Thu Apr 30 14:18:30 2020] GET /api/headerList.json => generated 294 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 8/8] 192.168.168.1 () {48 vars in 787 bytes} [Thu Apr 30 14:18:30 2020] GET /api/home.json => generated 1592 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 9/9] 192.168.168.1 () {50 vars in 879 bytes} [Thu Apr 30 14:21:25 2020] GET / => generated 2277 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 10/10] 192.168.168.1 () {48 vars in 799 bytes} [Thu Apr 30 14:21:25 2020] GET /api/headerList.json => generated 294 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 6308|app: 0|req: 11/11] 192.168.168.1 () {48 vars in 787 bytes} [Thu Apr 30 14:21:25 2020] GET /api/home.json => generated 1592 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)

@@ -1,15 +1,15 @@
-import { INIT } from "../../home/store/actionTypes";
 import Axios from "axios";
+import { INITDETAIL } from "./actionTypes";
 
 const init = (data: any) => ({
-    type: INIT,
+    type: INITDETAIL,
     title: data.title,
     content: data.content
 });
 
-export const getData = () => {
+export const getData = (id: number) => {
     return (dispatch: any) => {
-        Axios.get('/api/detail.json')
+        Axios.get('/api/detail.json?id=' + id)
             .then((res) => {
                 const data = res.data.data;
                 const action = init(data);

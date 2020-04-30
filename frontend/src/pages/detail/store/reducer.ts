@@ -1,5 +1,5 @@
-import { INIT } from "../../home/store/actionTypes";
 import { fromJS } from "immutable";
+import { INITDETAIL } from "./actionTypes";
 
 const defaultState = fromJS({
     title: '',
@@ -15,7 +15,7 @@ const init = (state: any, action: any) => (
 
 export default (state = defaultState, action: any) => {
     switch (action.type) {
-        case INIT:
+        case INITDETAIL:
             return init(state, action);
         default:
             return state;

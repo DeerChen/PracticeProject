@@ -121,6 +121,16 @@ def apiHomeList():
     })
 
 
+@app.route('/api/detail.json', methods=['GET'])
+def apiDetail():
+    return jsonify({
+        'data': {
+            "title": "测试标题",
+            "content": "<img src='//pic.abcyun.co/image/5ea7dd7bd41bf.jpg' alt='' /><p>测试段落</p><p>测试段落</p>"
+        }
+    })
+
+
 if __name__ == "__main__":
     app.run(
         host='0.0.0.0'

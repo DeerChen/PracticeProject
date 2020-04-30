@@ -5,11 +5,10 @@ import { getData } from './store/actionCreators';
 
 class Detail extends Component {
     componentDidMount() {
-        this.props.getDetail();
+        this.props.getDetail(this.props.match.params.id);
     }
     render() {
         const { title, content } = this.props;
-        console.log(this.props.match.params);
         return (
             <DetailWrapper>
                 <Header>
@@ -30,8 +29,8 @@ const mapState = (state) => ({
 
 const mapDispatch = (dispatch) => {
     return {
-        getDetail() {
-            dispatch(getData());
+        getDetail(id) {
+            dispatch(getData(id));
         }
     }
 };
