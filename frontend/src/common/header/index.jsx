@@ -20,6 +20,7 @@ import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
 import { Link } from 'react-router-dom';
+import { actionCreators as loginCreators } from '../../pages/login/store';
 
 class Header extends Component {
     componentDidMount() {
@@ -27,7 +28,7 @@ class Header extends Component {
     }
 
     render() {
-        const { focused, t } = this.props;
+        const { focused, t, login, logout } = this.props;
         return (
             <HeaderWrapper>
                 <GlobalStyle />
@@ -40,7 +41,24 @@ class Header extends Component {
                     <IconFontGlobalStyle />
                     <NavItem className='left'>首页</NavItem>
                     <NavItem className='left'>下载App</NavItem>
-                    <NavItem className='right'>登录</NavItem>
+                    {
+                        login ?
+                            <NavItem
+                                className='right login'
+                                onClick={logout}
+                            >
+                                退出
+                            </NavItem> :
+                            <Link
+                                to='/login'
+                            >
+                                <NavItem
+                                    className='right login'
+                                >
+                                    登录
+                                </NavItem>
+                            </Link>
+                    }
                     <NavItem className='right'>
                         <span className="iconfont">&#xe636;</span>
                     </NavItem>
@@ -61,11 +79,14 @@ class Header extends Component {
                     </SearchWrapper>
                 </Nav>
                 <Addition>
-                    <Btn className='writting'>
-                        <span className="iconfont">&#xe60e;</span>
+                    <Link to='/write'>
+                        <Btn className='writting'>
+                            <span className="iconfont">&#xe60e;</span>
                                 写文章
                                 </Btn>
-                    <Btn className='reg'>注册</Btn>
+                        <Btn className='reg'>注册</Btn>
+
+                    </Link>
                 </Addition>
             </HeaderWrapper>
         )
@@ -121,7 +142,8 @@ const mapStateToProps = (state) => {
         list: state.getIn(['header', 'list']),
         page: state.getIn(['header', 'page']),
         mouseToggle: state.getIn(['header', 'mouseToggle']),
-        totalPage: state.getIn(['header', 'totalPage'])
+        totalPage: state.getIn(['header', 'totalPage']),
+        login: state.getIn(['login', 'login'])
     }
 }
 
@@ -152,6 +174,9 @@ const mapDispathToProps = (dispatch) => {
             } else {
                 dispatch(actionCreators.changeP(1));
             }
+        },
+        logout() {
+            dispatch(loginCreators.logout());
         }
     }
 

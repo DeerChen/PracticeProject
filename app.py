@@ -131,6 +131,15 @@ def apiDetail():
     })
 
 
+@app.route('/api/login.json', methods=['GET'])
+def apiLogin():
+    return jsonify({
+        'data': {
+            'login': False
+        }
+    })
+
+
 if __name__ == "__main__":
     app.run(
         host='0.0.0.0'
