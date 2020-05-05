@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Header from './common/header';
+import Header from './common/header/loadable';
 import store from './store';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './pages/home';
-import Detail from './pages/detail';
-import Login from './pages/login';
-import Write from './pages/write';
+import Home from './pages/home/loadable';
+import Detail from './pages/detail/loadable';
+import Login from './pages/login/loadable';
+import Write from './pages/write/loadable';
 
 class App extends Component {
     render() {

@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import { LoginWrapper, LoginBox, Input, Button } from "./style";
 import { logCheck } from './store/actionCreators';
-import { Redirect } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 
 class Login extends PureComponent {
     render() {
@@ -48,4 +48,4 @@ const mapDispatch = (dispatch) => {
     }
 };
 
-export default connect(mapState, mapDispatch)(Login);
+export default connect(mapState, mapDispatch)(withRouter(Login));

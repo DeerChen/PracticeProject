@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 
 class Write extends PureComponent {
     render() {
@@ -19,4 +19,4 @@ const mapState = (state) => {
     }
 };
 
-export default connect(mapState, null)(Write);
+export default connect(mapState, null)(withRouter(Write));

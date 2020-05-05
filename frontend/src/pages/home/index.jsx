@@ -7,6 +7,7 @@ import Recommend from './componments/Recommend';
 import Writer from './componments/Writer';
 import { connect } from 'react-redux';
 import { getData, scrollTopChange } from './store/actionCreators';
+import { withRouter } from 'react-router-dom';
 
 class Home extends PureComponent {
     componentDidMount() {
@@ -22,7 +23,7 @@ class Home extends PureComponent {
         window.scrollTo(0, 0);
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         window.removeEventListener('scroll', this.props.scrollTopChange);
     }
 
@@ -67,4 +68,4 @@ const mapDispatch = (dispatch) => ({
     }
 });
 
-export default connect(mapState, mapDispatch)(Home);
+export default connect(mapState, mapDispatch)(withRouter(Home));

@@ -19,7 +19,7 @@ import { GlobalStyle } from '../../style';
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { actionCreators as loginCreators } from '../../pages/login/store';
 
 class Header extends Component {
@@ -182,4 +182,4 @@ const mapDispathToProps = (dispatch) => {
 
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(withRouter(Header));

@@ -15,12 +15,12 @@ const update = (data: string[]) => ({
 export const getList = () => {
     return (dispatch: any) => {
         Axios.get('/api/headerList.json')
-            .then((res) => {
+            .then((res: { data: { data: any; }; }) => {
                 const data = res.data.data;
                 const action = update(data);
                 dispatch(action);
             })
-            .catch((e) => {
+            .catch((e: any) => {
                 console.log(e);
             })
     }
