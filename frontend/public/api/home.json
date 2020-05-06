@@ -1,0 +1,64 @@
+{
+    "data": {
+        "topicList": [
+            {
+                "id": 1,
+                "title": "社会热点",
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg"
+            },
+            {
+                "id": 2,
+                "title": "娱乐八卦",
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg"
+            },
+            {
+                "id": 3,
+                "title": "母婴教育",
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg"
+            }
+        ],
+        "articleList": [
+            {
+                "id": 1,
+                "title": "测试标题",
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg",
+                "paragraph": "测试段落"
+            },
+            {
+                "id": 2,
+                "title": "测试标题",
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg",
+                "paragraph": "测试段落"
+            },
+            {
+                "id": 3,
+                "title": "测试标题",
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg",
+                "paragraph": "测试段落"
+            }
+        ],
+        "recommendList": [
+            {
+                "id": 1,
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg"
+            },
+            {
+                "id": 2,
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg"
+            },
+            {
+                "id": 3,
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg"
+            },
+            {
+                "id": 4,
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg"
+            },
+            {
+                "id": 5,
+                "imgUrl": " //pic.abcyun.co/image/5ea7dd7bd41bf.jpg"
+            }
+        ],
+        "writerList": []
+    }
+}
